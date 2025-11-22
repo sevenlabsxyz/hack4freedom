@@ -1,31 +1,32 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 
 const cities = [
   {
-    city: 'Lagos',
-    country: 'Nigeria',
-    flag: '🇳🇬',
-    date: 'Q1 2026',
-    buttonText: 'Register for Lagos',
-    buttonLink: 'https://tally.so/r/hack4freedom-apply?city=lagos',
+    city: "Lagos",
+    country: "Nigeria",
+    flag: "🇳🇬",
+    date: "Q1 2026",
+    buttonText: "Register for Lagos",
+    buttonLink: "https://tally.so/r/hack4freedom-apply?city=lagos",
   },
   {
-    city: 'Nairobi',
-    country: 'Kenya',
-    flag: '🇰🇪',
-    date: 'Q2 2026',
-    buttonText: 'Register for Nairobi',
-    buttonLink: 'https://tally.so/r/hack4freedom-apply?city=nairobi',
+    city: "Nairobi",
+    country: "Kenya",
+    flag: "🇰🇪",
+    date: "Q2 2026",
+    buttonText: "Register for Nairobi",
+    buttonLink: "https://tally.so/r/hack4freedom-apply?city=nairobi",
   },
   {
-    city: 'Port Harcourt',
-    country: 'Nigeria',
-    flag: '🇳🇬',
-    date: 'Q3 2026',
-    buttonText: 'Register for Port Harcourt',
-    buttonLink: 'https://tally.so/r/hack4freedom-apply?city=portharcourt',
+    city: "Port Harcourt",
+    country: "Nigeria",
+    flag: "🇳🇬",
+    date: "Q3 2026",
+    buttonText: "Register for Port Harcourt",
+    buttonLink: "https://tally.so/r/hack4freedom-apply?city=portharcourt",
   },
 ];
 
@@ -33,8 +34,13 @@ function Cities() {
   return (
     <section id="cities" className="py-20 md:py-32 bg-brand-ink">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-center">
+          <Badge variant="outline" className="mb-4 bg-pink-700">
+            Locations
+          </Badge>
+        </div>
         <h2 className="text-3xl md:text-4xl font-mono font-bold text-white mb-4 text-center">
-          &gt; 2026 Cities
+          2026 Cities
         </h2>
         <p className="text-brand-mute font-mono text-center mb-12 md:mb-16">
           Three stops. One mission: women building freedom tech in Africa.
@@ -51,8 +57,10 @@ function Cities() {
             >
               <Card className="hover:border-primary rounded-3xl border-2 p-10 transition hover:-translate-y-3 bg-card relative">
                 <CardContent className="p-0 flex flex-col min-h-[180px]">
-                  <div className="text-brand-green font-mono text-sm mb-4">
-                    {city.date}
+                  <div className="">
+                    <Badge variant="outline" className="mb-4 bg-pink-700">
+                      {city.date}
+                    </Badge>
                   </div>
 
                   <div className="flex-1">
@@ -80,4 +88,3 @@ function Cities() {
 }
 
 export { Cities };
-

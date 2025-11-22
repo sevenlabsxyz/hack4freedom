@@ -66,7 +66,7 @@ const Navbar = () => {
               <ContextMenu>
                 <ContextMenuTrigger asChild>
                   <div className="">
-                    <a href="/" className="flex items-center gap-2">
+                    <a href="/" className="hidden md:flex items-center gap-2">
                       <img src="/logo.png" className="max-w-[300px]" />
                     </a>
                   </div>
@@ -81,7 +81,7 @@ const Navbar = () => {
 
               <div className="hidden items-center space-x-4 md:flex">
                 {navLinks.map((link) => (
-                  <Button variant={"link"} asChild>
+                  <Button variant={"link"} asChild key={link.name}>
                     <Link
                       href={link.href}
                       className="-mt-1 !ml-4  !text-brand-mute"
@@ -112,9 +112,9 @@ const Navbar = () => {
                           onClick={() => setIsOpen(false)}
                         >
                           <img
-                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg"
-                            className="max-h-8"
-                            alt="shadcnblocks.com"
+                            src="/logo.png"
+                            className="max-h-6"
+                            alt="Hack4Freedom"
                           />
                         </a>
                       </div>
@@ -124,7 +124,7 @@ const Navbar = () => {
                             key={link.name}
                             href={link.href}
                             onClick={() => setIsOpen(false)}
-                            className="text-muted-foreground hover:bg-muted hover:text-foreground rounded-lg px-4 py-2 text-lg font-medium transition-colors"
+                            className="text-foreground hover:bg-muted rounded-lg px-4 py-2 text-lg font-medium transition-colors"
                           >
                             {link.name}
                           </a>
@@ -132,8 +132,12 @@ const Navbar = () => {
                       </div>
                       <div className="border-border border-t pt-6">
                         <div className="text-muted-foreground text-center text-sm">
-                          <div className="font-medium">Brisbane</div>
-                          <div className="mt-1">{currentTime}</div>
+                          <div className="font-medium">Powered by</div>
+                          <img
+                            src="/evento-logo.svg"
+                            alt="Evento"
+                            className="max-w-[130px] mx-auto mt-2"
+                          />
                         </div>
                       </div>
                     </div>

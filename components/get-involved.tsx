@@ -5,6 +5,7 @@ import { ArrowRight, UserPlus, Heart, Users } from "lucide-react";
 import React, { useState } from "react";
 
 import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
 
 const cards = [
   {
@@ -58,8 +59,13 @@ function GetInvolved() {
       className="py-20 md:py-32 bg-brand-ink overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-center">
+          <Badge variant="outline" className="mb-4 bg-pink-700">
+            Join Us
+          </Badge>
+        </div>
         <h2 className="text-3xl md:text-4xl font-mono font-bold text-white mb-12 md:mb-16 text-center">
-          &gt; Get Involved
+          Get Involved
         </h2>
 
         <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8">

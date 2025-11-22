@@ -1,4 +1,5 @@
 import { Rocket, Code2, Sparkles } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const steps = [
   {
@@ -28,11 +29,11 @@ function Journey() {
   return (
     <section id="journey" className="py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-brand-green font-mono mb-4 text-sm lg:text-base">
-          THE JOURNEY
-        </p>
+        <Badge variant="outline" className="mb-4 bg-pink-700">
+          The Path
+        </Badge>
         <h2 className="text-3xl font-mono font-bold text-white lg:text-4xl">
-          &gt; The Hack4Freedom Journey
+          The Hack4Freedom Journey
         </h2>
         <div className="mt-14 grid gap-6 lg:mt-20 lg:grid-cols-3">
           {steps.map((step, index) => {

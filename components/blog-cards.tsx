@@ -115,7 +115,7 @@ const BlogCards = ({
   return (
     <section id="blog" className="pb-20 md:pb-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="w-full -mx-4 sm:-mx-6 lg:-mx-8">
+        <div className="w-full">
           <Carousel
             setApi={setCarouselApi}
             opts={{
@@ -131,7 +131,7 @@ const BlogCards = ({
               {items.map((item) => (
                 <CarouselItem
                   key={item.id}
-                  className="pl-4 sm:pl-6 lg:pl-8 md:max-w-[452px]"
+                  className="pl-4 sm:pl-6 lg:pl-8 max-w-[365px] md:max-w-[452px]"
                 >
                   <a
                     href={item.url}

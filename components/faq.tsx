@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Badge } from "@/components/ui/badge";
 
 interface FaqItem {
   id: string;
@@ -78,7 +79,10 @@ export const FAQ = ({
   return (
     <section id="faq" className="py-32">
       <div className="container space-y-16 mx-auto px-4 md:px-0">
-        <div className="mx-auto flex max-w-3xl flex-col text-left md:text-center">
+        <div className="mx-auto flex max-w-3xl flex-col text-left md:text-center items-center">
+          <Badge variant="outline" className="mb-4 bg-pink-700">
+            Learn More
+          </Badge>
           <h2 className="mb-3 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl text-center">
             {heading}
           </h2>

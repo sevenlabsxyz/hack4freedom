@@ -1,5 +1,6 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { CircleUser } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const mentors = [
   {
@@ -104,8 +105,13 @@ function Mentors() {
   return (
     <section id="mentors" className="py-20 md:py-32 bg-brand-ink">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-center">
+          <Badge variant="outline" className="mb-4 bg-pink-700">
+            The Experts
+          </Badge>
+        </div>
         <h2 className="text-3xl md:text-4xl font-mono font-bold text-white mb-12 md:mb-16 text-center">
-          &gt; 2025 Mentors & Speakers
+          2025 Mentors & Speakers
         </h2>
 
         <div className="mt-14 grid gap-6 lg:mt-20 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

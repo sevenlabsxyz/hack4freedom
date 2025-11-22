@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Code, UserCheck, Venus, Sparkles } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const statsData = [
   {
@@ -23,12 +24,17 @@ function Work2025() {
   return (
     <section id="work-2025" className="pt-20 md:pt-32 pb-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-center">
+          <Badge variant="outline" className="mb-4 bg-pink-700">
+            Last Year
+          </Badge>
+        </div>
         <h2 className="text-3xl md:text-4xl font-mono font-bold text-white mb-12 md:mb-16 text-center">
-          &gt; 2025 Series
+          2025 Series
         </h2>
 
         {/* Stats Row */}
-        <div className="pb-10 pt-10 mb-16">
+        <div className="pb-10 pt-10 md:mb-4">
           <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
             {statsData.map(({ icon: Icon, heading, text }, i) => (
               <Card
@@ -44,7 +50,7 @@ function Work2025() {
                   <div className="mt-6 text-6xl font-semibold leading-tight">
                     {heading}
                   </div>
-                  <p className="mb-5 max-w-52 text-lg font-medium whitespace-nowrap">
+                  <p className="mb-5 max-w-52 text-lg font-medium whitespace-nowrap text-muted-foreground">
                     {text}
                   </p>
                 </CardContent>

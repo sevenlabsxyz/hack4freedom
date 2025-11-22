@@ -1,6 +1,7 @@
 import { Trophy, Medal, Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 const winners = [
   {
@@ -36,8 +37,13 @@ function Winners() {
   return (
     <section id="winners" className="py-20 md:py-32 bg-brand-ink">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-center">
+          <Badge variant="outline" className="mb-4 bg-pink-700">
+            Hall of Fame
+          </Badge>
+        </div>
         <h2 className="text-3xl md:text-4xl font-mono font-bold text-white mb-12 md:mb-16 text-center">
-          &gt; 2025 Winning Teams
+          2025 Winning Teams
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -76,13 +82,7 @@ function Winners() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="#"
-            className="px-6 py-3 border border-brand-mute text-brand-mute font-mono font-semibold rounded-xl hover:bg-brand-mute/10 transition-all"
-          >
-            Watch all demos →
-          </a>
-          <a
-            href="https://tally.so/r/3jXA2a"
+            href="/#cities"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 bg-brand-green text-brand-ink font-mono font-semibold rounded-xl hover:shadow-neon-green transition-all"
