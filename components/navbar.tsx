@@ -79,7 +79,7 @@ const Navbar = () => {
                 </ContextMenuContent>
               </ContextMenu>
 
-              <div className="hidden items-center space-x-4 md:flex">
+              <div className="hidden items-center space-x-2 md:space-x-4 md:flex">
                 {navLinks.map((link) => (
                   <Button variant={"link"} asChild key={link.name}>
                     <Link
