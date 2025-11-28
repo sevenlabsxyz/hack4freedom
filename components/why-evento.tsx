@@ -2,7 +2,10 @@ import { Badge } from "@/components/ui/badge";
 
 function WhyEvento() {
   return (
-    <section id="why-evento" className="py-20 md:py-32 bg-brand-ink">
+    <section
+      id="why-evento"
+      className="py-20 md:py-32 bg-brand-ink text-center"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div>
           <Badge variant="outline" className="mb-4 bg-pink-700">
@@ -16,7 +19,7 @@ function WhyEvento() {
           <h2 className="text-3xl md:text-4xl font-mono font-bold text-white mb-6">
             Why We Care at Evento
           </h2>
-          <div className="space-y-4 text-brand-mute font-mono max-w-xl">
+          <div className="space-y-4 text-brand-mute font-mono max-w-xl mx-auto">
             <p>
               <strong className="text-pink-700">
                 Hack4Freedom is organized by Evento
