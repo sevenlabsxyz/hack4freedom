@@ -128,15 +128,6 @@ function GetInvolved() {
                     {card.primaryButton.text}
                     <ArrowRight className="size-4 transition-transform group-hover/btn:translate-x-1" />
                   </a>
-                  {card.secondaryButton && (
-                    <a
-                      href={card.secondaryButton.link}
-                      className="px-6 py-3 border border-brand-mute text-brand-mute font-mono font-semibold rounded-xl hover:bg-brand-mute/10 transition-all text-center text-sm flex items-center justify-center gap-2"
-                    >
-                      {card.secondaryButton.text}
-                      <ArrowRight className="size-4" />
-                    </a>
-                  )}
                 </div>
               </div>
             </div>
