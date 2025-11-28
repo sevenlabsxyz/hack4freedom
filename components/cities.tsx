@@ -33,7 +33,7 @@ const cities = [
 
 function Cities() {
   return (
-    <section id="cities" className="py-20 md:py-32 bg-brand-ink">
+    <section id="cities" className="py-20 md:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center">
           <Badge variant="outline" className="mb-4 bg-pink-700">

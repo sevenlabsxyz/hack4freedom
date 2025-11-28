@@ -45,9 +45,9 @@ const Hero = ({ className }: { className?: string }) => {
               ▌
             </span>
           </h1>
-          <div className="text-base md:text-lg font-mono text-brand-mute max-w-lg md:max-w-2xl leading-relaxed mt-4 md:mt-8 mb-8 mx-auto">
+          <div className="text-base md:text-lg font-mono text-brand-mute max-w-lg md:max-w-xl leading-relaxed mt-4 md:mt-8 mb-8 mx-auto">
             Hack4Freedom trains female developers in Africa to build next-gen
-            open-source freedom software using Bitcoin.
+            open-source freedom software.
           </div>
           <div className="mt-10 flex justify-center max-w-[500px] mx-auto">
             <Link
