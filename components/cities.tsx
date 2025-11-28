@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
+import { EXTERNAL_LINKS } from "@/lib/constants";
 
 const cities = [
   {
@@ -10,7 +11,7 @@ const cities = [
     flag: "🇳🇬",
     date: "Q1 2026",
     buttonText: "Register for Lagos",
-    buttonLink: "https://tally.so/r/hack4freedom-apply?city=lagos",
+    buttonLink: EXTERNAL_LINKS.APPLY,
   },
   {
     city: "Nairobi",
@@ -18,7 +19,7 @@ const cities = [
     flag: "🇰🇪",
     date: "Q2 2026",
     buttonText: "Register for Nairobi",
-    buttonLink: "https://tally.so/r/hack4freedom-apply?city=nairobi",
+    buttonLink: EXTERNAL_LINKS.APPLY,
   },
   {
     city: "Port Harcourt",
@@ -26,7 +27,7 @@ const cities = [
     flag: "🇳🇬",
     date: "Q3 2026",
     buttonText: "Register for Port Harcourt",
-    buttonLink: "https://tally.so/r/hack4freedom-apply?city=portharcourt",
+    buttonLink: EXTERNAL_LINKS.APPLY,
   },
 ];
 

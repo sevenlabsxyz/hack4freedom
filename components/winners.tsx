@@ -1,35 +1,37 @@
-import { Trophy, Medal, Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { EXTERNAL_LINKS } from "@/lib/constants";
 
 const winners = [
   {
     placement: "1st Place",
-    icon: Trophy,
+    image: "/winners/lightningO.webp",
     projectName: "LightningO",
     projectSummary:
       "A Lightning + Nostr platform connecting global sponsors with local builders through bounties, gigs, and grants.",
     teamName: "Aaliyah Junaid",
-    videoLink: "#",
+    url: "https://github.com/Leeyah-123/lightning-o",
   },
   {
     placement: "2nd Place",
-    icon: Medal,
+    image: "/winners/bitsave.webp",
     projectName: "BitSave",
     projectSummary:
       "A Bitcoin savings app that blends group goals, Nostr chats, and smart coaching for better financial autonomy.",
     teamName: "Kareema Muhammad Hussaini & Amrah Uthman Sali",
-    videoLink: "#",
+    url: "https://github.com/amrahsali/bitSave",
   },
   {
     placement: "3rd Place",
-    icon: Star,
+    image: "/winners/bitstra.webp",
     projectName: "Bitstra",
     projectSummary:
       "An everyday Lightning app for buying airtime, data, and paying bills without banks.",
     teamName: "Divine Macaulay & Dinah Macaulay",
-    videoLink: "#",
+    url: "https://github.com/dinahbtcdev/bitstra",
   },
 ];
 
@@ -48,13 +50,23 @@ function Winners() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {winners.map((winner, index) => {
-            const IconComponent = winner.icon;
             return (
-              <a key={index} href={winner.videoLink} className="group block">
+              <a
+                key={index}
+                href={winner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+              >
                 <Card className="hover:border-primary rounded-3xl border-2 p-10 transition hover:-translate-y-3 bg-card">
                   <CardContent className="p-0">
-                    <div className="mb-4 flex justify-start">
-                      <IconComponent className="w-12 h-12 text-brand-green" />
+                    <div className="relative w-full aspect-video mb-4 rounded-lg overflow-hidden">
+                      <Image
+                        src={winner.image}
+                        alt={winner.projectName}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                     <h3 className="text-xl font-mono font-bold text-white mb-2">
                       {winner.placement}: {winner.projectName}
@@ -71,7 +83,8 @@ function Winners() {
                       variant="outline"
                       className="border-brand-green text-white font-mono group-hover:bg-brand-green/10 pointer-events-none"
                     >
-                      Watch their story →
+                      View Project
+                      <ArrowRight className="w-4 h-4" />
                     </Button>
                   </CardContent>
                 </Card>
@@ -82,7 +95,7 @@ function Winners() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="/#cities"
+            href={EXTERNAL_LINKS.APPLY}
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 bg-brand-green text-brand-ink font-mono font-semibold rounded-xl hover:shadow-neon-green transition-all"

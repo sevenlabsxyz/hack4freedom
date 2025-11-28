@@ -17,6 +17,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
+import { EXTERNAL_LINKS } from "@/lib/constants";
 
 const Navbar = () => {
   const [currentTime, setCurrentTime] = useState("");
@@ -90,10 +91,12 @@ const Navbar = () => {
                     </Link>
                   </Button>
                 ))}
-                <Button variant={"link"} className="-mt-1 !ml-4">
-                  Apply Now
-                  <ArrowUpRight className="h-4 w-4 ml-2" />
-                </Button>
+                <Link href={EXTERNAL_LINKS.APPLY} target="_blank" rel="noopener noreferrer">
+                  <Button variant={"link"} className="-mt-1 !ml-4">
+                    Apply Now
+                    <ArrowUpRight className="h-4 w-4 ml-2" />
+                  </Button>
+                </Link>
               </div>
 
               <div className="md:hidden flex items-center gap-2">

@@ -6,6 +6,7 @@ import React, { useState } from "react";
 
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
+import { EXTERNAL_LINKS } from "@/lib/constants";
 
 const cards = [
   {
@@ -17,7 +18,7 @@ const cards = [
     bgColor: "bg-brand-green/10",
     primaryButton: {
       text: "Apply Now",
-      link: "https://tally.so/r/3jXA2a",
+      link: EXTERNAL_LINKS.APPLY,
     },
   },
   {
@@ -28,12 +29,8 @@ const cards = [
     color: "text-brand-purple",
     bgColor: "bg-brand-purple/10",
     primaryButton: {
-      text: "Email Us",
-      link: "mailto:sponsor@evento.so",
-    },
-    secondaryButton: {
-      text: "Sponsor Deck",
-      link: "#",
+      text: "Become a Sponsor",
+      link: EXTERNAL_LINKS.SPONSOR,
     },
   },
   {
@@ -45,7 +42,7 @@ const cards = [
     bgColor: "bg-brand-red/10",
     primaryButton: {
       text: "Become a Mentor",
-      link: "mailto:mentors@evento.so",
+      link: EXTERNAL_LINKS.SPEAKER,
     },
   },
 ];

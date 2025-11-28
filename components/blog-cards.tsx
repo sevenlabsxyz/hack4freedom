@@ -135,6 +135,8 @@ const BlogCards = ({
                 >
                   <a
                     href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group flex flex-col justify-between"
                   >
                     <div>

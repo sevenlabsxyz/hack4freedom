@@ -1,5 +1,6 @@
 import React from "react";
 import { Facebook, Github, Instagram, Linkedin } from "lucide-react";
+import { EXTERNAL_LINKS } from "@/lib/constants";
 
 interface Footer7Props {
   logo?: {
@@ -42,9 +43,9 @@ const defaultSections = [
   {
     title: "Hack4Freedom 2026",
     links: [
-      { name: "Apply Now", href: "https://tally.so/r/3jXA2a" },
-      { name: "Become a Sponsor", href: "mailto:sponsor@evento.so" },
-      { name: "Join Mentorship Programme", href: "mailto:mentors@evento.so" },
+      { name: "Apply Now", href: EXTERNAL_LINKS.APPLY },
+      { name: "Become a Sponsor", href: EXTERNAL_LINKS.SPONSOR },
+      { name: "Join Mentorship Programme", href: EXTERNAL_LINKS.SPEAKER },
     ],
   },
   {
@@ -85,10 +86,7 @@ const defaultSocialLinks = [
   },
 ];
 
-const defaultLegalLinks = [
-  { name: "Terms & Conditions", href: "/terms" },
-  { name: "Privacy Policy", href: "/privacy" },
-];
+const defaultLegalLinks = [{ name: "evento.so", href: "https://evento.so" }];
 
 export const Footer = ({
   logo = {
@@ -100,7 +98,7 @@ export const Footer = ({
   sections = defaultSections,
   description = "A freedom tech hackathon for the next generation of female developers in Bitcoin",
   socialLinks = defaultSocialLinks,
-  copyright = "© 2026 Evento -- evento.so",
+  copyright = "© 2026 Evento",
   legalLinks = defaultLegalLinks,
 }: Footer7Props) => {
   return (
@@ -125,7 +123,12 @@ export const Footer = ({
             <ul className="text-muted-foreground flex items-center space-x-6">
               {socialLinks.map((social, idx) => (
                 <li key={idx} className="hover:text-primary font-medium">
-                  <a href={social.href} aria-label={social.label}>
+                  <a
+                    href={social.href}
+                    aria-label={social.label}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {social.icon}
                   </a>
                 </li>
@@ -142,7 +145,19 @@ export const Footer = ({
                       key={linkIdx}
                       className="hover:text-primary font-medium"
                     >
-                      <a href={link.href}>{link.name}</a>
+                      <a
+                        href={link.href}
+                        target={
+                          link.href.startsWith("http") ? "_blank" : undefined
+                        }
+                        rel={
+                          link.href.startsWith("http")
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
+                      >
+                        {link.name}
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -155,7 +170,17 @@ export const Footer = ({
           <ul className="order-1 flex flex-col gap-6 md:order-2 md:flex-row">
             {legalLinks.map((link, idx) => (
               <li key={idx} className="hover:text-primary">
-                <a href={link.href}> {link.name}</a>
+                <a
+                  href={link.href}
+                  target={link.href.startsWith("http") ? "_blank" : undefined}
+                  rel={
+                    link.href.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
+                >
+                  {link.name}
+                </a>
               </li>
             ))}
           </ul>

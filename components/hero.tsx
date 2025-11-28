@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { EXTERNAL_LINKS } from "@/lib/constants";
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "./ui/badge";
@@ -23,7 +24,11 @@ const Hero = ({ className }: { className?: string }) => {
     <section className={cn("py-20 md:py-28 lg:py-36 mx-auto", className)}>
       <div className="container px-4 md:px-6 mx-auto pt-8">
         <div className="mx-auto max-w-4xl text-center">
-          <Link href="/">
+          <Link
+            href="https://evento.so"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Badge variant={"outline"} className="mb-4 bg-pink-700">
               Powered by
               <img
@@ -44,32 +49,48 @@ const Hero = ({ className }: { className?: string }) => {
             Hack4Freedom trains female developers in Africa to build next-gen
             open-source freedom software using Bitcoin.
           </div>
-          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href="https://tally.so/r/3jXA2a" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="px-8 py-6 text-base font-medium">
+          <div className="mt-10 flex justify-center max-w-[500px] mx-auto">
+            <Link
+              href={EXTERNAL_LINKS.APPLY}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full"
+            >
+              <Button
+                size="lg"
+                className="w-full rounded-full px-12 py-6 text-base font-medium"
+              >
                 Apply to Hack4Freedom
                 <ArrowUpRight className="ml-2 size-5" strokeWidth={1.5} />
               </Button>
             </Link>
-            <Link href="mailto:mentors@evento.so">
+          </div>
+          <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-[500px] mx-auto">
+            <Link
+              href={EXTERNAL_LINKS.SPEAKER}
+              className="flex-1 w-full"
+              target="_blank"
+            >
               <Button
                 size="lg"
                 variant="secondary"
-                className="px-8 py-6 text-base font-medium"
+                className="w-full px-8 py-6 text-base font-medium rounded-full"
               >
-                Become a Mentor
-                <MoveRight className="ml-2 size-5" strokeWidth={1.5} />
+                Mentor
+                <ArrowUpRight className="ml-2 size-5" strokeWidth={1.5} />
               </Button>
             </Link>
-          </div>
-          <div className="mt-4 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href="mailto:sponsor@evento.so">
+            <Link
+              href={EXTERNAL_LINKS.SPONSOR}
+              className="flex-1 w-full"
+              target="_blank"
+            >
               <Button
                 size="lg"
-                variant="link"
-                className="px-8 py-6 text-base font-medium text-pink-700"
+                variant="secondary"
+                className="w-full px-8 py-6 text-base font-medium rounded-full"
               >
-                Sponsor Hack4Freedom
+                Sponsor
                 <ArrowUpRight className="ml-2 size-5" strokeWidth={1.5} />
               </Button>
             </Link>

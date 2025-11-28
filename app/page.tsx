@@ -12,8 +12,20 @@ import { FAQ } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
 import { BlogCards } from "@/components/blog-cards";
+import { getPostsByTag } from "@/lib/ghost";
 
-export default function Home() {
+export default async function Home() {
+  const ghostPosts = await getPostsByTag("hack4freedom-com");
+
+  const blogItems = ghostPosts.length > 0
+    ? ghostPosts.map((post) => ({
+        id: post.id,
+        title: post.title,
+        summary: post.excerpt || "",
+        url: `https://evento.so/blog/${post.slug}`,
+        image: post.feature_image || "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+      }))
+    : undefined;
   return (
     <main id="main-content" className="min-h-screen">
       <Navbar />
@@ -24,7 +36,7 @@ export default function Home() {
       <Prizes />
       <GetInvolved />
       <Work2025 />
-      <BlogCards />
+      {blogItems && blogItems.length > 0 && <BlogCards items={blogItems} />}
       <Mentors />
       <Winners />
       <WhyEvento />
