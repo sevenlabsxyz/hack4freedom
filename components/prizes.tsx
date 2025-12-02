@@ -20,7 +20,8 @@ const prizes = [
   {
     icon: Globe,
     title: "Community Access",
-    description: "Join a network of African women developers and designers.",
+    description:
+      "Join a network of women developers and designers in the Global South.",
   },
   {
     icon: Rocket,

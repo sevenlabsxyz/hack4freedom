@@ -12,7 +12,7 @@ const cards = [
   {
     title: "Apply",
     description:
-      "Women 18+ in Africa with basic dev skills or strong motivation to learn. No prior Bitcoin experience required.",
+      "Women 18+ in the Global South with basic dev skills or strong motivation to learn. No prior Bitcoin experience required.",
     icon: UserPlus,
     color: "text-brand-green",
     bgColor: "bg-brand-green/10",

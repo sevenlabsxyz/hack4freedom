@@ -43,8 +43,8 @@ function WhyEvento() {
             </p>
             <p>
               Hack4Freedom is our effort to change that, by giving more women in
-              Africa the skills, support, and community they need to become
-              builders.
+              the Global South the skills, support, and community they need to
+              become builders.
             </p>
           </div>
         </div>

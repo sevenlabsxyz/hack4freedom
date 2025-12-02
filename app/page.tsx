@@ -11,6 +11,7 @@ import { WhyEvento } from "@/components/why-evento";
 import { FAQ } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
+import { Partners } from "@/components/partners";
 import { BlogCards } from "@/components/blog-cards";
 import { getPostsByTag } from "@/lib/ghost";
 
@@ -30,6 +31,7 @@ export default async function Home() {
     <main id="main-content" className="min-h-screen">
       <Navbar />
       <Hero />
+      <Partners />
       <Cities />
       <About />
       <Journey />

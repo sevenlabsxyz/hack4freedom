@@ -22,6 +22,22 @@ const cities = [
     buttonLink: EXTERNAL_LINKS.APPLY,
   },
   {
+    city: "São Paulo",
+    country: "Brazil",
+    flag: "🇧🇷",
+    date: "Q2 2026",
+    buttonText: "Register for São Paulo",
+    buttonLink: EXTERNAL_LINKS.APPLY,
+  },
+  {
+    city: "Belo Horizonte",
+    country: "Brazil",
+    flag: "🇧🇷",
+    date: "Q3 2026",
+    buttonText: "Register for Belo Horizonte",
+    buttonLink: EXTERNAL_LINKS.APPLY,
+  },
+  {
     city: "Port Harcourt",
     country: "Nigeria",
     flag: "🇳🇬",
@@ -44,7 +60,8 @@ function Cities() {
           2026 Cities
         </h2>
         <p className="text-brand-mute font-mono text-center mb-12 md:mb-16">
-          Three stops. One mission: women building freedom tech in Africa.
+          Five stops. One mission: women building freedom tech in the Global
+          South.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

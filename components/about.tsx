@@ -68,8 +68,9 @@ function About() {
               <div className="space-y-4 text-brand-mute font-mono">
                 <p>
                   Hack4Freedom is a two-week, women-only hybrid hackathon where
-                  African developers learn, build, and ship open-source freedom
-                  tools using Bitcoin, Lightning, Nostr, and eCash.
+                  developers in the Global South learn, build, and ship
+                  open-source freedom tools using Bitcoin, Lightning, Nostr, and
+                  eCash.
                 </p>
                 <p>
                   It combines hands-on workshops, global mentorship, and
@@ -139,7 +140,7 @@ function About() {
               </h3>
               <p className="text-muted-foreground font-mono">
                 Only <strong>~3%</strong> of open-source contributors globally
-                are women. Across Africa,{" "}
+                are women. Across the Global South,{" "}
                 <strong className="text-pink-700">
                   women represent less than 8%
                 </strong>{" "}
@@ -179,7 +180,7 @@ function About() {
                 Shaping freedom tech
               </h3>
               <p className="text-muted-foreground font-mono">
-                Hack4Freedom creates a dedicated, women-only space where African
+                Hack4Freedom creates a dedicated, women-only space where
                 builders can gain the skills, mentorship, and confidence needed
                 to{" "}
                 <strong className="text-pink-700">

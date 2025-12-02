@@ -25,7 +25,7 @@ const faqs = [
     id: "1",
     question: "Who can apply?",
     answer:
-      "Women 18+ in Africa with basic development skills or strong motivation to learn. No prior Bitcoin experience is required.",
+      "Women 18+ in the Global South with basic development skills or strong motivation to learn. No prior Bitcoin experience is required.",
   },
   {
     id: "2",
